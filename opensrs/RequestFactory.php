@@ -146,7 +146,7 @@ class RequestFactory
             $route = self::$RequestRoutes[$routeKey];
         }
 
-        $class = '\opensrs\\'.$route;
+        $class = $route;
 
         if (class_exists($class)) {
             if (!isset($dataObject->attributes)) {
